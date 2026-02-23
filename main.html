@@ -30,6 +30,7 @@
 
     
 <section class="rsvp-section">
+  <p id="totalHadirText">Memuat jumlah hadir...</p>
   <h3>Konfirmasi Kehadiran</h3>
 
   <form id="rsvpForm">
@@ -179,6 +180,18 @@ document.getElementById("rsvpForm").addEventListener("submit", function(e) {
     document.getElementById("responseMsg").innerText = "Terjadi kesalahan. Coba lagi.";
   });
 });
+    <script>
+fetch("PASTE_URL_WEB_APP_DISINI")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("totalHadirText").innerText =
+      data.hadir + " Jemaat Sudah Konfirmasi Hadir";
+  })
+  .catch(err => {
+    document.getElementById("totalHadirText").innerText =
+      "Tidak dapat memuat data";
+  });
+</script>
 </script>
 </body>
 </html>
