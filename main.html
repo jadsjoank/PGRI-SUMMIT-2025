@@ -48,7 +48,32 @@
 <p>JAKARTA - INDONESIA</p>
       <a href="https://www.google.com/maps/dir/?api=1&destination=Jakarta+International+Velodrome" class="btn" target="_blank" rel="noopener noreferrer">Dapatkan Navigasi</a>
     </section>
+    
+----------/* RSVP*/----------
+    
+<section class="rsvp-section">
+  <h3>Konfirmasi Kehadiran</h3>
 
+  <form id="rsvpForm">
+    <input type="text" name="nama" placeholder="Nama Lengkap" required>
+
+    <select name="kehadiran" required>
+      <option value="">-- Konfirmasi Kehadiran --</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+    </select>
+
+    <textarea name="pesan" placeholder="Ucapan / Doa (opsional)"></textarea>
+
+    <button type="submit">Kirim</button>
+  </form>
+
+  <p id="responseMsg"></p>
+</section>
+
+----------/* RSVP*/----------
+
+    
     <section class="fade-in-up">
       <h2>| Narasumber |</h2>
       
